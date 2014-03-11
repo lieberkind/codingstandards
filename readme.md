@@ -50,7 +50,7 @@ h1 {
 
 Notice the 4 space indentation? Indentation is good.
 
-### Property order
+### Declaration order
 This is a tough one and it really comes down to choice. For a long time, I alphabetized my declarations by property name:
 
 ```css
@@ -116,12 +116,15 @@ In the example below, there are "natural" and "unnatural" groups. A natural grou
 
     color: #333;
 
+    /* None of the rules are more important than the other so sort alphabetically after h */
     height: 200px;
     width: 400px;
     
+    /* None of the rules are more important than the other so sort alphabetically after m */
     margin: 0 0 20px;
     padding: 20px;
 
+    /* left and top doesn't make sense without position, so sort alphabetically after p */
     position: absolute;
     left: 40px;
     top: 30px;
@@ -129,6 +132,7 @@ In the example below, there are "natural" and "unnatural" groups. A natural grou
     text-align: center;
 }
 ```
+In the example, I have tried to explain the logic behind my sorting of groups.
 
 ## JavaScript
 - Everything in seperate files
