@@ -14,7 +14,11 @@ Proper indentation should be practised religiously.
 Not much to say here yet. Remember indentation. Nothing is worse than
 
 ```html
-    <!-- All kinds of nested divs -->
+            <!-- 
+                ...
+                All kinds of nested divs and their content
+                ...
+            -->
 
         </div>    
 </div>
