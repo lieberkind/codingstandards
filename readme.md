@@ -8,9 +8,24 @@ Indentation is everything. If code is not indented properly, it is like trying t
 "translate_tabs_to_spaces": true
 ```
 
+Proper indentation should be practised religiously.
+
 ## HTML
+Not much to say here yet. Remember indentation. Nothing is worse than
+
+```html
+    <!-- All kinds of nested divs -->
+
+        </div>    
+</div>
+    </div>
+    </div>
+</div>
+```
+
 
 ## CSS
+
 
 ## PHP
 ### Laravel
