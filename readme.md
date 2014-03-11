@@ -50,6 +50,85 @@ h1 {
 
 Notice the 4 space indentation? Indentation is good.
 
+### Property order
+This is a tough one and it really comes down to choice. For a long time, I alphabetized my declarations by property name:
+
+```css
+.container {
+    background: #eaeaea;
+    border: 2px solid #000;
+    border-radius: 5px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #333;
+    height: 200px;
+    left: 40px;
+    margin: 0 0 20px;
+    padding: 20px;
+    position: absolute;
+    text-align: center;
+    top: 30px;
+    width: 400px;
+}
+```
+
+Nice - you are never in doubt where to place a declaration. And a short time after you start to adhere to this rule, it's amazing how little time you spend looking for a specific declaration in a selector with many rules.
+
+However, I was frustrated that this rule prevents the grouping of similar rules like width and height and position, left, right, top, bottom, etc.: 
+
+```css
+.container {
+    width: 400px;
+    height: 200px;
+
+    position: absolute;
+    left: 40px;
+    top: 30px;
+    
+    background: #eaeaea;
+    border: 2px solid #000;
+    border-radius: 5px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #333;
+    margin: 0 0 20px;
+    padding: 20px;
+    text-align: center;
+}
+```
+
+What I do nowadays is combine the two above styles. I seperate all groups with a single line. The extra space between groups increases the readability, and as long as the css is minified, it doesn't have any impact on file size. Win.
+
+In the example below, there are "natural" and "unnatural" groups. A natural group is a group that naturally opstår because the declarations touch the same area. In the below example the only natural group is the border-group. Another natural group example could be something like font-size, font-family, font-weight. They all have to do with the font. The unnatural groups height/width, margin/padding and position/left/top. Even though the property names are matching in the same way as with natural groups, it feels right to group them. Width and height tells something about the dimensions of the selector, margin and padding tells about the box-model (arguably, box-sizing could belong in this group), and position, top and left tells something about the position.
+
+```css
+.container {
+    background: #eaeaea;
+
+    border: 2px solid #000;
+    border-radius: 5px;
+    
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    color: #333;
+
+    height: 200px;
+    width: 400px;
+    
+    margin: 0 0 20px;
+    padding: 20px;
+
+    position: absolute;
+    left: 40px;
+    top: 30px;
+    
+    text-align: center;
+}
+```
 
 ## JavaScript
 - Everything in seperate files
