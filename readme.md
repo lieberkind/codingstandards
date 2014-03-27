@@ -33,6 +33,17 @@ Not much to say here yet. Remember indentation. Nothing is worse than
 ### Only use classes
 Never use ids as css-selectors. By using only classes it is so much easier to calculate specificity. Ids should be used for JavaScript only.
 
+### Never use the same classes for JavaScript and CSS
+When using frameworks such as jQuery, where classes are sometimes used to fetch a collection of elements, make sure that the same class isn't used as both a CSS and JavaScript selector. Instead, if an element needs to be used by some JavaScript code, give it an additional class that expresses that clearly:
+
+```html
+<div class="container js-container">
+    ...
+</div>
+```
+
+In this way there is no doubt that the container-element is needed in your JS somewhere.
+
 ### Spacing and indentation
 There should be exactly one space between a property and a value:
 
