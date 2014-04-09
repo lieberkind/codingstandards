@@ -12,8 +12,8 @@ Indentation is everything. If code is not indented properly, it is like trying t
 
 Proper indentation should be practised religiously.
 
-### Use single or double quotes consistently
-It does not matter whether single or double quotes are used, as long as they are used consistently. Double quotes has some advantages in PHP, so they should probably be preferred to single quotes.
+<!-- ### Use single or double quotes consistently
+It does not matter whether single or double quotes are used, as long as they are used consistently. Double quotes has some advantages in PHP, so they should probably be preferred to single quotes. -->
 
 ## HTML
 Not much to say here yet. Remember indentation. Nothing is worse than
@@ -158,14 +158,39 @@ In the example below, there are "natural" and "unnatural" groups. A natural grou
 In the example, I have tried to explain the logic behind my sorting of groups.
 
 ## JavaScript
-- Everything in seperate files
-- Avoid global namespace polution
+
+### Put everything in seperate files
+As far as possible, all JavaScript should go in seperate files and be included from markup, rather than be nested in between markup.
+
+### Avoid global namespace polution
+In order to avoid potential naming collisions, it should be avoided to define variables and functions in the global namespace. Define an object that has a unique name in relation to your app and populate that with your variables and functions.
+
+```javascript
+// Bad example
+var name = "John Doe";
+
+function sayHello() {
+    alert("Hello!");
+}
+
+// Better
+var myAwesomeApp = {};
+
+myAwesomeApp.name = "John Doe";
+
+myAwesomeApp.sayHello = function () {
+    alert("Hello!");
+}
+```
+In this way, only a single global variable is introduced. And by giving it a unique name that has to do with your app, the risk of naming collisions are reduced greatly.
+
+
 - Declare all variables at top of function
 
-## PHP in general
+## PHP
 
 ### Quotes
-In the PHP community it is generally said that it doesn't matter whether single or double quotes are used, as long as they are used consistently. However, there are
+In the PHP community it is generally said that it doesn't matter whether single or double quotes are used, as long as they are used consistently. However, there are some advantages to double quotes over single quotes, so double quotes should be preferred.
 
 ### Laravel
 #### Extract similar view content to sub views
