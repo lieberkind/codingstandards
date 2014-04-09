@@ -27,6 +27,13 @@ Not much to say here yet. Remember indentation. Nothing is worse than
 </div>
 ```
 
+If lots of nested divs, add a comment that tells which div you close
+```
+            </div> 
+        </div>
+    </div>
+</div> <!-- closing .main -->
+```
 
 ## CSS
 
@@ -150,6 +157,12 @@ In the example, I have tried to explain the logic behind my sorting of groups.
 - Avoid global namespace polution
 - Declare all variables at top of function
 
-## PHP
+## PHP in general
+
+### Quotes
+In the PHP community it is generally said that it doesn't matter whether single or double quotes are used, as long as they are used consistently. However, there are
+
 ### Laravel
 #### Extract similar view content to sub views
+
+
