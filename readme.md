@@ -1,6 +1,8 @@
 # Coding standards
 
 ## In general
+
+### Indentation
 Indentation is everything. If code is not indented properly, it is like trying to make sense of a book without punctuation. Indent with 4 spaces. This can be set in Sublime Text by opening settings (cmd+,) and adding the following lines:
 
 ```
@@ -9,6 +11,9 @@ Indentation is everything. If code is not indented properly, it is like trying t
 ```
 
 Proper indentation should be practised religiously.
+
+### Use single or double quotes consistently
+It does not matter whether single or double quotes are used, as long as they are used consistently. Double quotes has some advantages in PHP, so they should probably be preferred to single quotes.
 
 ## HTML
 Not much to say here yet. Remember indentation. Nothing is worse than
@@ -27,7 +32,7 @@ Not much to say here yet. Remember indentation. Nothing is worse than
 </div>
 ```
 
-If lots of nested divs, add a comment that tells which div you close
+Also, if your HTML contains lots of nested elements, it can be really helpful for others if a comment is added about what element is closed.
 ```
             </div> 
         </div>
